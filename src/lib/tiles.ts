@@ -1,4 +1,8 @@
-import { tiles } from "@/data/tiles";
+import tileCatalog from "@/data/tiles.json";
+
+import type { Tile } from "@/types/tile";
+
+const tiles = tileCatalog as Tile[];
 
 export function getAllTiles(search?: string) {
   const query = search?.trim().toLowerCase();

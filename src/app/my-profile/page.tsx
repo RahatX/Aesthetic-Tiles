@@ -51,7 +51,7 @@ export default async function MyProfilePage() {
             </div>
             <Link
               href="/my-profile/update"
-              className="mt-8 inline-flex rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-white"
+              className="btn btn-gallery mt-8 inline-flex rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-white"
             >
               Update Information
             </Link>

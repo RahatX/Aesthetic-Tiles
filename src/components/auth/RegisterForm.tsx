@@ -75,7 +75,7 @@ export function RegisterForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-full bg-[var(--ink)] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+          className="btn btn-gallery h-12 w-full rounded-full bg-[var(--ink)] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {loading ? "Registering..." : "Register"}
         </button>

@@ -1,6 +1,6 @@
 # Aesthetic Tiles
 
-Responsive tile gallery assignment built with Next.js App Router, Tailwind CSS, and Better Auth with a MongoDB adapter.
+Responsive tile gallery assignment built with Next.js App Router, Tailwind CSS, DaisyUI, and Better Auth with a MongoDB adapter.
 
 ## Purpose
 
@@ -15,7 +15,9 @@ Add your deployed URL here after publishing:
 ## Key Features
 
 - Responsive custom UI for mobile, tablet, and desktop screens
+- Explicit UI-library usage with DaisyUI components blended into the custom design
 - Home page banner, marquee, and featured tiles loaded from the server
+- JSON-backed tile catalog served through Next.js API routes
 - Public gallery page with live tile search by title
 - Private tile details route with auth redirect support
 - Better Auth email/password and Google authentication flow
@@ -33,6 +35,7 @@ Add your deployed URL here after publishing:
 - `@better-auth/mongo-adapter`
 - `mongodb`
 - `tailwindcss`
+- `daisyui`
 - `animate.css`
 - `lucide-react`
 - `clsx`

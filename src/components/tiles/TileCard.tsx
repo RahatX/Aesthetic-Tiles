@@ -33,26 +33,26 @@ export function TileCard({ tile }: TileCardProps) {
             {tile.description}
           </p>
         </div>
-        <p className="whitespace-nowrap rounded-full bg-[var(--sand)] px-3 py-1 text-sm font-semibold text-[var(--ink)]">
+        <p className="badge badge-lg whitespace-nowrap border-0 bg-[var(--sand)] px-3 py-3 text-sm font-semibold text-[var(--ink)]">
           {formatCurrency(tile.price, tile.currency)}
         </p>
       </div>
 
       <div className="mt-5 flex items-center justify-between">
         <span
-          className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] ${
+          className={`badge badge-outline rounded-full px-3 py-3 text-xs font-semibold uppercase tracking-[0.25em] ${
             tile.inStock
-              ? "bg-emerald-100 text-emerald-700"
-              : "bg-rose-100 text-rose-700"
+              ? "border-emerald-200 bg-emerald-100 text-emerald-700"
+              : "border-rose-200 bg-rose-100 text-rose-700"
           }`}
         >
           {tile.inStock ? "In Stock" : "Sold Out"}
         </span>
         <Link
           href={`/tile/${tile.id}`}
-          className="rounded-full border border-[var(--border)] px-4 py-2 text-sm font-semibold text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
+          className="btn btn-sm btn-gallery rounded-full border border-[var(--border)] bg-transparent px-4 text-sm font-semibold text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
         >
-          View Details
+          Details
         </Link>
       </div>
     </article>
