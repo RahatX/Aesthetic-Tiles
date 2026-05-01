@@ -37,7 +37,8 @@ export function Footer() {
           <div className="mt-4 space-y-3 text-sm text-white/80">
             <p>Dhaka Design Hub, Road 12, Banani</p>
             <p>support@aesthetictiles.dev</p>
-            <p>+880 1700-112233</p>
+
+            <p>+880 1700-000000</p>
           </div>
         </div>
       </div>
