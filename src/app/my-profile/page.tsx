@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { Avatar } from "@/components/shared/Avatar";
 import { requireSession } from "@/lib/session";
 
 export default async function MyProfilePage() {
@@ -14,16 +14,7 @@ export default async function MyProfilePage() {
         </p>
         <div className="mt-6 grid gap-8 md:grid-cols-[180px_1fr] md:items-center">
           <div className="relative h-44 w-44 overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--sand)]">
-            {session.user.image ? (
-              <Image
-                src={session.user.image}
-                alt={session.user.name}
-                fill
-                unoptimized
-                className="object-cover"
-                sizes="176px"
-              />
-            ) : null}
+            <Avatar name={session.user.name} image={session.user.image} />
           </div>
 
           <div>
@@ -51,7 +42,7 @@ export default async function MyProfilePage() {
             </div>
             <Link
               href="/my-profile/update"
-              className="btn btn-gallery mt-8 inline-flex rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-white"
+              className="btn btn-gallery-primary mt-8 inline-flex rounded-full px-6 py-3 text-sm font-semibold"
             >
               Update Information
             </Link>

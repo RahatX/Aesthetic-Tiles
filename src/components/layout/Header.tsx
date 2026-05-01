@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { LogIn } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 
+import { Avatar } from "@/components/shared/Avatar";
 import { authClient } from "@/lib/auth-client";
 import { cn } from "@/lib/utils";
 
@@ -52,9 +54,9 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition",
+                  "nav-pill rounded-full px-4 py-2 text-sm font-medium transition",
                   isActive
-                    ? "bg-[var(--ink)] text-white"
+                    ? "nav-pill-active text-[var(--ink)]"
                     : "text-[var(--muted)] hover:bg-[var(--sand)] hover:text-[var(--ink)]",
                 )}
               >
@@ -66,14 +68,13 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           {isPending ? (
-            <div className="h-10 w-24 animate-pulse rounded-full bg-[var(--sand)]" />
+            <div className="h-12 w-12 animate-pulse rounded-full bg-[var(--sand)]" />
           ) : session?.user ? (
             <>
-              <Link
-                href="/my-profile"
-                className="hidden text-sm font-medium text-[var(--muted)] sm:inline-flex"
-              >
-                {session.user.name}
+              <Link href="/my-profile" className="account-orb" aria-label="My profile">
+                <span className="relative h-10 w-10 overflow-hidden rounded-full">
+                  <Avatar name={session.user.name} image={session.user.image} />
+                </span>
               </Link>
               <button
                 type="button"
@@ -86,9 +87,13 @@ export function Header() {
           ) : (
             <Link
               href="/login"
-              className="rounded-full bg-[var(--ink)] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+              className="account-orb"
+              aria-label="Login"
             >
-              Login
+              <LogIn className="size-5 text-[var(--ink)]" />
+              <span className="hidden text-sm font-semibold text-[var(--ink)] sm:inline">
+                Account
+              </span>
             </Link>
           )}
         </div>

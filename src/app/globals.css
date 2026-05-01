@@ -59,10 +59,86 @@ a {
 }
 
 .btn-gallery {
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 9999px;
   box-shadow: none;
   text-transform: none;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.btn-gallery:hover {
+  transform: translateY(-1px);
+}
+
+.btn-gallery-primary {
+  border-color: rgba(47, 93, 80, 0.28);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.16), transparent 60%),
+    linear-gradient(145deg, rgba(32, 53, 43, 0.96), rgba(47, 93, 80, 0.9));
+  color: #fff;
+}
+
+.btn-gallery-primary:hover {
+  border-color: rgba(47, 93, 80, 0.38);
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.2), transparent 60%),
+    linear-gradient(145deg, rgba(42, 71, 57, 0.94), rgba(63, 112, 93, 0.92));
+  color: #fff;
+}
+
+.btn-gallery-ghost {
+  border-color: rgba(26, 35, 28, 0.14);
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--ink);
+  backdrop-filter: blur(16px);
+}
+
+.btn-gallery-ghost:hover {
+  border-color: rgba(26, 35, 28, 0.18);
+  background: rgba(233, 223, 206, 0.68);
+  color: var(--ink);
+}
+
+.nav-pill {
+  position: relative;
+}
+
+.nav-pill-active {
+  border: 1px solid rgba(47, 93, 80, 0.18);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.36), transparent 48%),
+    linear-gradient(145deg, rgba(217, 231, 223, 0.95), rgba(233, 223, 206, 0.88));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.75),
+    0 8px 30px rgba(47, 93, 80, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.account-orb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid rgba(26, 35, 28, 0.12);
+  border-radius: 9999px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.38), transparent 44%),
+    rgba(255, 255, 255, 0.6);
+  padding: 0.35rem 0.55rem;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.78),
+    0 12px 24px rgba(26, 35, 28, 0.08);
+  backdrop-filter: blur(16px);
+}
+
+.account-orb:hover {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.44), transparent 44%),
+    rgba(233, 223, 206, 0.72);
 }
 
 .marquee {

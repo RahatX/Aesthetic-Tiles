@@ -80,7 +80,7 @@ export function UpdateProfileForm({
           <button
             type="submit"
             disabled={loading}
-            className="btn btn-gallery h-12 w-full rounded-full bg-[var(--ink)] px-4 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+            className="btn btn-gallery-primary h-12 w-full rounded-full px-4 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
           >
             {loading ? "Updating..." : "Update Information"}
           </button>

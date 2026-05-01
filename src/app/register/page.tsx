@@ -20,8 +20,8 @@ export default async function RegisterPage() {
           Start curating your profile
         </h1>
         <p className="mt-4 max-w-xl text-base leading-8 text-[var(--muted)]">
-          Create an account with your name, email, photo URL, and password. You
-          can also use Google sign-in to join the community faster.
+          Create an account with your name, email, profile image, and password.
+          You can also use Google sign-in to join the community faster.
         </p>
       </div>
       <RegisterForm />

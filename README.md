@@ -1,6 +1,6 @@
 # Aesthetic Tiles
 
-Responsive tile gallery assignment built with Next.js App Router, Tailwind CSS, DaisyUI, and Better Auth with a MongoDB adapter.
+Responsive tile gallery built with Next.js App Router, Tailwind CSS, DaisyUI, and Better Auth with a MongoDB adapter.
 
 ## Purpose
 
@@ -49,10 +49,11 @@ Add your deployed URL here after publishing:
 npm install
 ```
 
-2. Copy `.env.example` to `.env` and provide real values:
+2. Copy `.env.example` to `.env.local` and provide real values:
 
 ```bash
 MONGODB_URI=
+USE_IN_MEMORY_MONGO=false
 BETTER_AUTH_SECRET=
 BETTER_AUTH_URL=http://localhost:3000
 GOOGLE_CLIENT_ID=
@@ -62,7 +63,7 @@ GOOGLE_CLIENT_SECRET=
 3. Run the development server:
 
 ```bash
-npm run dev
+npm.cmd run dev
 ```
 
 4. Open `http://localhost:3000`
@@ -71,4 +72,6 @@ npm run dev
 
 - For Google OAuth, add `http://localhost:3000/api/auth/callback/google` as an authorized redirect URI in Google Cloud.
 - Better Auth profile updates follow the official `updateUser` flow from the Better Auth users/accounts documentation.
+- During local development, you can keep `USE_IN_MEMORY_MONGO=true` in `.env.local` if you do not have a local MongoDB server running yet.
+- For final submission or production deployment, use a real MongoDB database such as MongoDB Atlas and set `USE_IN_MEMORY_MONGO=false`.
 - Replace the live URL in this README after deployment.

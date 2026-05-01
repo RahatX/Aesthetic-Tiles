@@ -32,7 +32,7 @@ export function GoogleButton({ callbackURL }: GoogleButtonProps) {
         type="button"
         onClick={handleGoogleLogin}
         disabled={loading}
-        className="btn btn-gallery h-12 w-full rounded-full border border-[var(--border)] bg-transparent px-4 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-[var(--sand)] disabled:cursor-not-allowed disabled:opacity-70"
+        className="btn btn-gallery-ghost h-12 w-full rounded-full px-4 py-3 text-sm font-semibold disabled:cursor-not-allowed disabled:opacity-70"
       >
         {loading ? "Redirecting to Google..." : "Continue with Google"}
       </button>

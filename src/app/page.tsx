@@ -21,13 +21,13 @@ export default function HomePage() {
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
                 href="/all-tiles"
-                className="btn btn-gallery rounded-full bg-[var(--ink)] px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90"
+                className="btn btn-gallery-primary rounded-full px-6 py-3 text-sm font-semibold"
               >
                 Browse Now
               </Link>
               <Link
                 href="/login"
-                className="btn btn-gallery rounded-full border border-[var(--border)] bg-transparent px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:bg-white/70"
+                className="btn btn-gallery-ghost rounded-full px-6 py-3 text-sm font-semibold"
               >
                 Login to Save Your Picks
               </Link>

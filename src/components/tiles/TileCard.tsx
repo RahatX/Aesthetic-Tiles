@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 
+import { TileImage } from "@/components/tiles/TileImage";
 import type { Tile } from "@/types/tile";
 import { formatCurrency } from "@/lib/utils";
 
@@ -12,13 +12,7 @@ export function TileCard({ tile }: TileCardProps) {
   return (
     <article className="tile-card group animate__animated animate__fadeInUp">
       <div className="relative h-64 overflow-hidden rounded-[1.8rem]">
-        <Image
-          src={tile.image}
-          alt={tile.title}
-          fill
-          className="object-cover transition duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        <TileImage src={tile.image} alt={tile.title} />
       </div>
 
       <div className="mt-5 flex items-start justify-between gap-4">
@@ -50,7 +44,7 @@ export function TileCard({ tile }: TileCardProps) {
         </span>
         <Link
           href={`/tile/${tile.id}`}
-          className="btn btn-sm btn-gallery rounded-full border border-[var(--border)] bg-transparent px-4 text-sm font-semibold text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
+          className="btn btn-sm btn-gallery-ghost rounded-full px-4 text-sm font-semibold"
         >
           Details
         </Link>

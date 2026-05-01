@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tile gallery assignment built with Next.js App Router and Better Auth.",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint ."
@@ -19,6 +19,7 @@
     "daisyui": "^5.5.19",
     "lucide-react": "^1.14.0",
     "mongodb": "^7.2.0",
+    "mongodb-memory-server": "^11.1.0",
     "next": "^16.2.4",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
